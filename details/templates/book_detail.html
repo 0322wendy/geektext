@@ -13,5 +13,7 @@
 	<p>{{ book.publisher }}</p>
 	<p>Published on: {{book.published_date|date:"M D Y"}}</p>
 	<p>Page Count: {{book.pages }}</p>
+	<p>{% include 'rating.html' %}</p>
+	<p><a href="{%url 'rate_book' book.id}">Rate {{book.title}}</a></p>
+	<p><a href="{%url 'write_comment' book.id%}">Write a Review</a></p>
 </div>
-
