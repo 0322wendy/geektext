@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^details/(\d+)/', views.book_detail, name='book_detail'),
     url(r'^reviews/(\d+)/', ratings_views.display_comment, name='display_comment'),
     url(r'^details/review/(\d+)/', ratings_views.write_comment, name='write_comment'),
-    url(r'^details/rate/(\d+)/', ratings_views.rate_book, name='rate_book'),
+    url(r'^details/rate/(\d+)', ratings_views.rate_book, name='rate_book'),
 ]
 
 if settings.DEBUG: # new

@@ -12,9 +12,9 @@ def rate_book(request, id):
     rate = None
     if request.method == 'POST':
         rate_form = RateForm(request.POST)
-        if form.is_valid():
-            rate = form.save(commit=False)
-            rate.book = request.book
+        if rate_form.is_valid():
+            rate = rate_form.save(commit=False)
+            rate.book = book
             rate.save()
 
             return redirect('/details/' + id + '/')
